@@ -24,48 +24,21 @@ dependencies:
   JSON:
     version: "^1.2.0"
     comments_enabled: true
+
+these_are_equivalent:
+  - 5, "nok"
+  -
+    - 5
+    - nok
+
+these_are_also_equivalent:
+  - name: "mac", version: "1.16"
+  -
+    name: "mac"
+    version: "1.16"
 ```
 
 ## Considerations
-
-### Lists
-
-Dash syntax:
-```
-list:
-  - "one"
-  - "two"
-```
-- Easy to read
-- Inconsistent with a short-form syntax
-
-Comma syntax:
-```
-list: "one", "two"
-```
-- Easy to read
-- Needs a multiline form to go with it
-
-Multiline comma syntax:
-```
-list2:
-  "one",
-  "two"
-```
-- Consistent with short-form comma syntax
-- Hard to read when there are both lists and objects
-
-Bracket syntax:
-```
-list: [ "one", "two" ]
-list2: [
-  "one",
-  "two"
-]
-```
-- Consistent between forms
-- Trailing comma?
-- Would like to avoid brackets
 
 ### Numbers
 
